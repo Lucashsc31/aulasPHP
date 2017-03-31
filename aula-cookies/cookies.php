@@ -2,7 +2,7 @@
 
 //SETANDO COOKIE
 
-$nome = "Nome do Cookie";
+$nome = "NomeDoCookie";
 $valor = "200";
 $expira = time() + (60 * 60 * 24 * 7);
 
