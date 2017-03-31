@@ -1,9 +1,11 @@
 <?php
-/*
-Usando o método GET, crie um formulário que receba o nome do estudante,
-2 notas de Zero à Dez e calcule a média quando um botão de submit for pressionado!
-Faça a validação dos campos de modo que usuário tenha que preencher todos os campos.
-*/
+
+if(isset($_GET["calcular"])){
+  $nome = $_GET["nome"];
+  $nota1 = $_GET["nota1"];
+  $nota2 = $_GET["nota2"];
+  $media = ($nota1 + $nota2) /2;
+}
 
 ?>
 
@@ -35,8 +37,14 @@ Faça a validação dos campos de modo que usuário tenha que preencher todos os
             <label for="nota2">Nota 2</label>
             <input type="text" class="form-control" id="nota2" name="nota2" placeholder="Nota 2">
           </div>
-          <button type="submit" class="btn btn-primary">Calcular Média</button>
+          <button type="submit" class="btn btn-primary" name="calcular">Calcular Média</button>
         </form>
+        <br>
+        <?php
+          if(isset($media)){
+            echo "<div class='alert alert-success'> Parabéns $nome, sua média é <strong>$media</strong></div>";
+          }
+        ?>
 
     </div>
   </div>
