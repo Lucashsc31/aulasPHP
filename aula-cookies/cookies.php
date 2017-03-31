@@ -3,7 +3,7 @@
 //SETANDO COOKIE
 
 $nome = "Nome do Cookie";
-$valor = 200;
+$valor = "200";
 $expira = time() + (60 * 60 * 24 * 7);
 
 setcookie($nome, $valor, $expira);
